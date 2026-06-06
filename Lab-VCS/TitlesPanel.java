@@ -21,6 +21,7 @@ public class TitlesPanel extends JPanel implements ActionListener {
     *
     * @param _shape encoded shape and style type
     */
+
    public TitlesPanel(int _shape) {
       this.shape = _shape;
       this.animation = new Timer(50, this);
@@ -65,14 +66,12 @@ public class TitlesPanel extends JPanel implements ActionListener {
 
       this.is_done = true;
    }
-   
+
    /**
     * Repaints the panel and draws animated shapes on it.
     *
     * @param g graphics context used for drawing
     */
-   public void paintComponent(Graphics g) {
-
    public void paintComponent(Graphics g) {
       super.paintComponent(g);
       this.doDrawing(g);

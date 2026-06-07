@@ -69,6 +69,16 @@ public class ShapeFactory {
 
    }
 
+   /**
+    * Creates a shape using explicit type and style values.
+    *
+    * @param type selected shape type
+    * @param style selected visual style
+    */
+   public ShapeFactory(ShapeType type, ShapeStyle style) {
+      this(type.getCode() * 10 + style.getCode());
+   }
+
    private static Shape createStar(int arms, Point center, double rOuter, double rInner) {
       double angle = Math.PI / (double)arms;
       GeneralPath path = new GeneralPath();

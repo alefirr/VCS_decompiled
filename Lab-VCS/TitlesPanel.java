@@ -29,6 +29,16 @@ public class TitlesPanel extends JPanel implements ActionListener {
       this.animation.start();
    }
 
+   /**
+    * Creates a drawing panel using explicit shape type and style.
+    *
+    * @param type selected shape type
+    * @param style selected visual style
+    */
+   public TitlesPanel(ShapeType type, ShapeStyle style) {
+      this(type.getCode() * 10 + style.getCode());
+   }
+
    public void actionPerformed(ActionEvent arg0) {
       if (this.is_done) {
          this.repaint();
